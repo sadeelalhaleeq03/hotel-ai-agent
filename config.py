@@ -2,12 +2,12 @@
 
 # Hotel Information
 HOTEL_NAME = "Sunrise Luxury Hotel"
-CHECK_IN_TIME = "3:00 PM"
+CHECK_IN_TIME = "6:00 PM"
 CHECK_OUT_TIME = "11:00 AM"
 
 # Knowledge Base Topics
 HOTEL_KB = {
-    "check_in": "Check-in time is 3:00 PM",
+    "check_in": "Check-in time is 6:00 PM",
     "check_out": "Check-out time is 11:00 AM",
     "pet_policy": "Pets allowed with $50 per night fee",
     "cancellation": "Free cancellation up to 48 hours before arrival",
