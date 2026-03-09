@@ -1,9 +1,14 @@
-# 🏨 Hotel Support AI Agent
+# 🏨 Hotel AI Support Agent
 
-A production-grade Python AI agent demonstrating:
-- ✅ **Tool Use** (restaurant availability checking)
-- ✅ **3-Tier Reasoning** (safety → speed → complexity)
-- ✅ **Guardrails** (escalation, error handling, fallbacks)
+A production-grade AI agent written in pure Python that demonstrates key principles of AI engineering without relying on external APIs.
+
+This agent is designed to handle guest inquiries for a luxury hotel, featuring:
+- ✅ **Tool Use:** Checks restaurant availability.
+- ✅ **3-Tier Reasoning:** Prioritizes safety, then speed, then complex queries.
+- ✅ **Built-in Guardrails:** Handles escalations, errors, and fallbacks gracefully.
+
+---
+
 
 ## Requirements Met
 
@@ -40,6 +45,7 @@ pip install -r requirements.txt
 ```bash
 python agent.py
 ```
+
 
 ## Test These Queries
 
@@ -171,3 +177,20 @@ What facilities do you offer?
 
 **Built to demonstrate AI engineering best practices**
 ```
+
+
+
+## 🧠 Reasoning Approach & Design Decisions
+
+This agent was intentionally built using **pure Python** to demonstrate that effective AI systems can be created without relying on external frameworks or APIs.
+
+1.  **Custom Pure Python Build:** The decision to avoid frameworks like LangChain or CrewAI makes the agent extremely fast, lightweight, and free to run. It also provides complete control over the logic and removes external dependencies.
+
+2.  **3-Tier Reasoning Model:** The agent mimics a human thought process by categorizing and prioritizing tasks:
+    *   **Safety First (Escalation):** It immediately identifies and flags high-risk queries for human intervention. This is a critical guardrail for any customer-facing system.
+    *   **Speed & Efficiency (Knowledge Base):** It handles common, low-complexity questions instantly, providing a great user experience.
+    *   **Complexity (Tool Use):** It reserves its more complex logic for tasks that require dynamic data, like checking real-time availability.
+
+3.  **Separation of Concerns:** By keeping all data and configurations in `config.py`, the core logic in `agent.py` remains clean, readable, and focused. This design makes it easy for anyone to update hotel policies or restaurant details without touching the agent's code.
+
+4.  **No External API Calls:** The agent operates entirely offline. This guarantees data privacy, eliminates network latency, and ensures zero operational costs, making it a robust and reliable solution.
