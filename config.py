@@ -63,5 +63,5 @@ SUPPORT_EMAIL = "support@hotel.com"
 MAX_FAILED_ATTEMPTS = 2
 MODEL = "claude-opus-4-20250805"
 MAX_TOKENS = 1024
-```
+
 
